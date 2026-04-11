@@ -14,7 +14,7 @@ Log in with your email. A wallet will be created for you automatically -- this i
 
 The Console is the **operator's view** -- it's where the leadership council manages agreements, monitors transactions, and verifies the audit trail. Members never see this interface.
 
-<!-- screenshot: login screen -->
+![Console login screen](screenshots/01-login.png)
 
 ### What you see: Your Profile
 
@@ -24,7 +24,7 @@ After logging in, click your email in the top right to see your profile. This sh
 - **Privy DID** -- your decentralized identifier (think of it as your digital passport on the platform)
 - **KeyRing** -- your cryptographic public key, used to verify your signatures. "1 active key" means your wallet is set up and ready to sign.
 
-<!-- screenshot: profile view -->
+![Your Profile view](screenshots/02-profile.png)
 
 ### What you see: The Console tabs
 
@@ -44,7 +44,7 @@ In the Console, go to the **Agreement Editor** tab. Drag and drop the `.vkt` fil
 
 The `.vkt` file is the full Operating Agreement -- both the legal text and the business logic that enforces it. It contains all the rules for membership, payments, KYC, voting, and governance.
 
-<!-- screenshot: upload area with file being dropped -->
+![Agreement Editor with upload area](screenshots/03-agreement-editor.png)
 
 ## 3. Deploy the Agreement
 
@@ -56,11 +56,11 @@ After uploading, click **Deploy**. You'll see the deployment steps listed as a f
 - Setting up the Admissions Agent
 - Deploying each promise (apply, payment, KYC, etc.)
 
-Review the steps, then click **Sign & Deploy**. Wait for all steps to complete (this may take a minute).
+Review the steps, then click **Deploy Agreement**. Wait for all steps to complete (this may take a minute).
 
 This is the moment the Operating Agreement becomes active on the platform. Every step is a signed transaction with its own receipt.
 
-<!-- screenshot: deploy flow with steps -->
+![Deploy flow with steps](screenshots/04-deploy.png)
 
 ## 4. Copy the Workspace ID
 
@@ -68,7 +68,7 @@ Click **Workspace** in the top navigation bar. Copy the workspace ID -- you'll n
 
 A workspace is an isolated container for one deployment of the agreement. Think of it as "which DAO am I interacting with."
 
-<!-- screenshot: workspace dropdown with ID highlighted -->
+![Workspace page with ID](screenshots/05-workspace.png)
 
 ## 5. Open BIM Heroes and Start Onboarding
 
@@ -80,7 +80,7 @@ Log in with your email. You'll land on the onboarding screen.
 
 BIM Heroes is the **member-facing experience**. It's what applicants and members see. The Console and BIM Heroes are two views of the same system -- every action a member takes here shows up as a receipt in the Console.
 
-<!-- screenshot: workspace ID prompt -->
+![Connect to Agreement screen](screenshots/06-connect.png)
 
 ## 6. Walk Through the Onboarding Steps
 
@@ -92,13 +92,13 @@ Follow the steps on screen:
 4. **Sign the Operating Agreement** -- review and sign
 5. **Done** -- you're onboarded
 
-<!-- screenshot: onboarding steps overview -->
+![Onboarding application form](screenshots/07-onboarding.png)
 
 ## 7. Check the Audit Trail
 
 Go back to the Console and open the **Receipts** tab. You'll see every action from the onboarding process listed as a completed, signed receipt.
 
-<!-- screenshot: receipts tab with completed onboarding -->
+![Receipts tab with audit trail](screenshots/08-receipts.png)
 
 ### Export and Audit Guide
 
@@ -123,4 +123,4 @@ Every step you completed -- from deploying the agreement to onboarding as a memb
 
 ## Feedback
 
-You can use the **chat bubble in the bottom right corner** of the app to report anything -- bugs, confusing steps, suggestions, or questions. You can attach screenshots directly in the chat.
+Use the **chat bubble in the bottom right corner** of the app to report anything -- bugs, confusing steps, suggestions, or questions. You can attach screenshots directly in the chat.

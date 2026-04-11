@@ -38,7 +38,7 @@ The Console has several tabs along the top:
 
 ## 2. Upload the Operating Agreement
 
-Download the agreement template: **[.vkt file link]**
+Download the agreement template: **[operating-agreement-v4.vkt](operating-agreement-v4.vkt)**
 
 In the Console, go to the **Agreement Editor** tab. Drag and drop the `.vkt` file into the upload area (or click to browse).
 

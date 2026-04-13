@@ -4,6 +4,8 @@ This guide walks you through deploying the Operating Agreement and onboarding as
 
 Vektor is the operating system for the DAO. Every decision, every signature, every payment is recorded as an immutable, cryptographically signed receipt. What you're testing is the real governance infrastructure that will run BIM Hero DAO.
 
+> **Note:** In this demo, you'll play both roles -- the council operator (Console) and the applicant member (BIM Heroes). In production, these would be different people.
+
 ---
 
 ## 1. Open the Console
@@ -40,7 +42,7 @@ The Console has several tabs along the top:
 
 Download the agreement template: **[operating-agreement-v4.vkt](operating-agreement-v4.vkt)**
 
-In the Console, go to the **Agreement Editor** tab. Drag and drop the `.vkt` file into the upload area (or click to browse).
+In the Console, go to the **Agreement Editor** tab. Click **Open .vkt File** and select the downloaded file, or drag and drop it into the upload area.
 
 The `.vkt` file is the full Operating Agreement -- both the legal text and the business logic that enforces it. It contains all the rules for membership, payments, KYC, voting, and governance.
 
@@ -72,7 +74,7 @@ A workspace is an isolated container for one deployment of the agreement. Think 
 
 ## 5. Open BIM Heroes and Start Onboarding
 
-Go to: **https://vektor-bimheroes-staging-5txpnthcc-bendeworks-2157s-projects.vercel.app/onboarding**
+Go to: **https://vektor-bimheroes-staging.vercel.app/onboarding**
 
 When prompted, paste the workspace ID you copied. This connects the member onboarding app to the agreement you just deployed.
 
@@ -87,16 +89,19 @@ BIM Heroes is the **member-facing experience**. It's what applicants and members
 Follow the steps on screen:
 
 1. **Apply** -- fill in your details, agree to the terms, click Continue
-2. **Payment** -- complete the $100 application fee (test mode -- no real charge)
-3. **KYC Verification** -- complete the identity check (test mode)
+2. **Payment** -- complete the $100 application fee. You'll be redirected to Stripe checkout. Use test card number `4242 4242 4242 4242`, any future expiry date, and any CVC. No real charge is made.
+3. **KYC Verification** -- complete the identity verification. This uses Didit in test mode -- follow the prompts to complete the simulated verification.
 4. **Sign the Operating Agreement** -- review and sign
-5. **Done** -- you're onboarded
+
+> **What happens behind the scenes:** After you pay, the Stripe Agent automatically confirms the payment (you'll see the state change from APPLICANT to FEE_PAID). After KYC, the KYC Agent verifies your identity. After signing, the Admissions Agent automatically approves your application. These automated steps happen without your input -- the agents are doing their jobs.
+
+5. **Done** -- once all automated checks pass, you're an active member and will be redirected to the member dashboard.
 
 ![Onboarding application form](screenshots/07-onboarding.png)
 
 ## 7. Check the Audit Trail
 
-Go back to the Console and open the **Receipts** tab. You'll see every action from the onboarding process listed as a completed, signed receipt.
+Go back to the Console and open the **Receipts** tab. You'll see every action from the onboarding process listed as a completed, signed receipt -- including the automated agent actions.
 
 ![Receipts tab with audit trail](screenshots/08-receipts.png)
 
